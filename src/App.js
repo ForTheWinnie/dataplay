@@ -23,9 +23,10 @@ function App() {
         <option value="2011">2011</option>
         <option value="2010">2010</option>
       </select>
+      {/* geo map using d3 */}
       <Map data={data} property={property} />
       
-      <h2>Bar chart</h2>
+      {/* bar chart using react-google-charts */}
       <Chart
         chartType="Bar"
         loader={<div>Loading Chart</div>}
@@ -61,7 +62,7 @@ function App() {
               filterColumnIndex: 0, // filter by neighborhood
               ui: {
                 labelStacking: "vertical",
-                label: "Filter by neighborhood using this drop-down",
+                label: "Filter by neighborhood using the drop-down below",
                 allowTyping: false,
                 allowMultiple: false,
               },
