@@ -1,5 +1,5 @@
 export const accidentData = [
-  ["neighborhood", "2010", "2011", "2012", "2013", "2014"],
+  ["Neighborhood", "2010", "2011", "2012", "2013", "2014"],
   ["Naylor Gardens", 0, 1, 1, 0, 0],
   ["Mount Vernon Square", 2, 6, 5, 3, 3],
   ["Eastland Gardens", 0, 0, 0, 0, 1],
