@@ -35,12 +35,12 @@ function Map({ data, property }) {
       // transform .geo.json data into shapes 
       const pathGenerator = geoPath().projection(projection);
 
-      function mouseMove(d,i) {
+      function mouseEnter(d,i) {
         svg.selectAll(".label")
           .join("text")
           .attr("class", "label")
           .text(d.properties.name)
-          .attr("x", 305)
+          .attr("x", 205)
           .attr("y", 25);
       }
       // render each neighborhood
@@ -50,7 +50,7 @@ function Map({ data, property }) {
         .on("click", feature => {
           setSelectedNeighborhood(SelectedNeighborhood === feature ? null : feature);
         })
-        .on("mousemove", mouseMove)
+        .on("mouseenter", mouseEnter)
         .attr("class", "neighborhood")
         .transition()
         .duration(1000)
