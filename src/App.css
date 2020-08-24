@@ -1,0 +1,18 @@
+
+body {
+  text-align: center;
+  margin-left: 50px;
+  margin-right: 50px;
+}
+h1 {
+  margin-bottom: 0;
+}
+h2 {
+  margin-top: 0;
+}
+select {
+  margin: auto auto;
+  display: block;
+  font-size: 16px;
+  padding: 5px 10px;
+}
