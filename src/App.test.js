@@ -11,7 +11,7 @@ Enzyme.configure({ adapter: new Adapter() });
 // unmount or cleanup after every test
 afterEach(cleanup); 
 
-describe("landing page tests", () => {
+describe("landing page with charts renders", () => {
   it("App renders without crashing", () => {
     const div = document.createElement("div");
     ReactDOM.render(<App />, div);
@@ -24,6 +24,10 @@ describe("landing page tests", () => {
     
     expect(mapH1Content).toBeInTheDocument();
   });
+  it("Map svg renders without crashing", () => {
+    const mapComponent = mount(<App />);
+    expect(mapComponent.find(".wrapperMap svg")).toHaveLength(1);
+  });  
 });
 
 describe("select drop down value when options changed", () => {
